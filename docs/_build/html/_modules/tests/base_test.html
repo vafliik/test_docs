@@ -45,7 +45,7 @@
   <h1>Source code for tests.base_test</h1><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">pytest</span>
 
-<span class="kn">from</span> <span class="nn">pages.chatbox</span> <span class="k">import</span> <span class="n">Chatbox</span>
+<span class="kn">from</span> <span class="nn">pages.message_panel</span> <span class="k">import</span> <span class="n">MessagePanel</span>
 <span class="kn">from</span> <span class="nn">utils.framework</span> <span class="k">import</span> <span class="n">Framework</span>
 
 <div class="viewcode-block" id="BaseTestClass"><a class="viewcode-back" href="../../tests.html#tests.base_test.BaseTestClass">[docs]</a><span class="k">class</span> <span class="nc">BaseTestClass</span><span class="p">():</span>
@@ -63,7 +63,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">base_url</span><span class="p">)</span>
 
         <span class="c1"># Associate Page objects</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">chatbox</span> <span class="o">=</span> <span class="n">Chatbox</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_panel</span> <span class="o">=</span> <span class="n">MessagePanel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span>
 
         <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">toggle_browser</span><span class="p">()</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Closing browser</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>

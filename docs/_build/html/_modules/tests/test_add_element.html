@@ -52,16 +52,13 @@
 
 <div class="viewcode-block" id="TestAddElement"><a class="viewcode-back" href="../../tests.html#tests.test_add_element.TestAddElement">[docs]</a><span class="k">class</span> <span class="nc">TestAddElement</span><span class="p">(</span><span class="n">BaseTestClass</span><span class="p">):</span>
 
-    <span class="c1"># @pytest.mark.parametrize(&#39;input_value&#39;, [&#39;a&#39;, &#39;b&#39;, &#39;c&#39;])</span>
-    <span class="c1"># def test_1(self, input_value):</span>
-    <span class="c1">#     print(&quot;Testing input: &quot; + input_value)</span>
-    <span class="c1">#     assert 1</span>
-
 <div class="viewcode-block" id="TestAddElement.test_add_button"><a class="viewcode-back" href="../../tests.html#tests.test_add_element.TestAddElement.test_add_button">[docs]</a>    <span class="k">def</span> <span class="nf">test_add_button</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&#39;&#39;&#39; Verify that Button element can be added by typing into the chatbox input&#39;&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_panel</span><span class="o">.</span><span class="n">type</span><span class="p">(</span><span class="s1">&#39;Add FlatButton&#39;</span><span class="p">)</span>
 
-        <span class="k">assert</span> <span class="mi">1</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">message_panel</span><span class="o">.</span><span class="n">wait_for_number_of_replies_to_be</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
+        <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">message_panel</span><span class="o">.</span><span class="n">last_huma_response</span><span class="p">()</span> <span class="o">==</span> <span class="s1">&#39;OK, I added a FlatButton&#39;</span></div></div>
 </pre></div>
 
           </div>

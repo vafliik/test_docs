@@ -46,6 +46,19 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
+<div class="section" id="module-utils.custom_expected_conditions">
+<span id="utils-custom-expected-conditions-module"></span><h2>utils.custom_expected_conditions module<a class="headerlink" href="#module-utils.custom_expected_conditions" title="Permalink to this headline">¶</a></h2>
+<p>Custom &#8220;Expected Conditions&#8221; which are generally useful
+within webdriver tests.</p>
+<dl class="class">
+<dt id="utils.custom_expected_conditions.number_of_elements_to_be">
+<em class="property">class </em><code class="descclassname">utils.custom_expected_conditions.</code><code class="descname">number_of_elements_to_be</code><span class="sig-paren">(</span><em>locator</em>, <em>num_elements</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/custom_expected_conditions.html#number_of_elements_to_be"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.custom_expected_conditions.number_of_elements_to_be" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>An expectation for the number of located
+elements to be a certain value.</p>
+</dd></dl>
+
+</div>
 <div class="section" id="module-utils.framework">
 <span id="utils-framework-module"></span><h2>utils.framework module<a class="headerlink" href="#module-utils.framework" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
@@ -55,7 +68,10 @@
 <dl class="method">
 <dt id="utils.framework.Framework.get_opt">
 <code class="descname">get_opt</code><span class="sig-paren">(</span><em>key</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/framework.html#Framework.get_opt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.framework.Framework.get_opt" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Read the value from configuration (.properties) file
+:param key: configuration key
+:return: configuration value</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="utils.framework.Framework.load_configs">
@@ -77,12 +93,26 @@ return both local config dict and server confgi dict. Otherwise function returns
 <dl class="method">
 <dt id="utils.framework.Framework.start_browser">
 <code class="descname">start_browser</code><span class="sig-paren">(</span><em>browser_type=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/framework.html#Framework.start_browser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.framework.Framework.start_browser" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Start browser. Currently supported are Chrome and Firefox
+Require latest selenium webdrivers to be installed and added in system path.
+If no browser type specified, the value from .properties is used</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>browser_type</strong> &#8211; &#8216;Chrome&#8217; for Chrome browser, any other value for Firefox (default)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Selenium Webdriver</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 <dl class="method">
 <dt id="utils.framework.Framework.stop_browser">
 <code class="descname">stop_browser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/utils/framework.html#Framework.stop_browser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#utils.framework.Framework.stop_browser" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Quits the browser used for testing</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -102,6 +132,7 @@ return both local config dict and server confgi dict. Otherwise function returns
   <ul>
 <li><a class="reference internal" href="#">utils package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-utils.custom_expected_conditions">utils.custom_expected_conditions module</a></li>
 <li><a class="reference internal" href="#module-utils.framework">utils.framework module</a></li>
 <li><a class="reference internal" href="#module-utils">Module contents</a></li>
 </ul>

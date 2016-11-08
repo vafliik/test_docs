@@ -46,20 +46,45 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-pages.chatbox">
-<span id="pages-chatbox-module"></span><h2>pages.chatbox module<a class="headerlink" href="#module-pages.chatbox" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-pages.base_page">
+<span id="pages-base-page-module"></span><h2>pages.base_page module<a class="headerlink" href="#module-pages.base_page" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="pages.chatbox.Chatbox">
-<em class="property">class </em><code class="descclassname">pages.chatbox.</code><code class="descname">Chatbox</code><span class="sig-paren">(</span><em>driver</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/chatbox.html#Chatbox"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.chatbox.Chatbox" title="Permalink to this definition">¶</a></dt>
+<dt id="pages.base_page.BasePage">
+<em class="property">class </em><code class="descclassname">pages.base_page.</code><code class="descname">BasePage</code><span class="sig-paren">(</span><em>driver</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/base_page.html#BasePage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.base_page.BasePage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<dl class="attribute">
-<dt id="pages.chatbox.Chatbox.chatbox_input">
-<code class="descname">chatbox_input</code><em class="property"> = ('xpath', '//input[contains(&#64;id,&quot;Expressyourself&quot;)]')</em><a class="headerlink" href="#pages.chatbox.Chatbox.chatbox_input" title="Permalink to this definition">¶</a></dt>
+<p>Class with shared methods / locators for extending Page Objects</p>
+<dl class="method">
+<dt id="pages.base_page.BasePage.wait_for_element">
+<code class="descname">wait_for_element</code><span class="sig-paren">(</span><em>*locator</em>, <em>*</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/base_page.html#BasePage.wait_for_element"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.base_page.BasePage.wait_for_element" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="pages.chatbox.Chatbox.type">
-<code class="descname">type</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/chatbox.html#Chatbox.type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.chatbox.Chatbox.type" title="Permalink to this definition">¶</a></dt>
+<dt id="pages.base_page.BasePage.wait_for_number_of_elements">
+<code class="descname">wait_for_number_of_elements</code><span class="sig-paren">(</span><em>locator</em>, <em>expected_number</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/base_page.html#BasePage.wait_for_number_of_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.base_page.BasePage.wait_for_number_of_elements" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pages.message_panel">
+<span id="pages-message-panel-module"></span><h2>pages.message_panel module<a class="headerlink" href="#module-pages.message_panel" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pages.message_panel.MessagePanel">
+<em class="property">class </em><code class="descclassname">pages.message_panel.</code><code class="descname">MessagePanel</code><span class="sig-paren">(</span><em>driver</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/message_panel.html#MessagePanel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.message_panel.MessagePanel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pages.base_page.BasePage" title="pages.base_page.BasePage"><code class="xref py py-class docutils literal"><span class="pre">pages.base_page.BasePage</span></code></a></p>
+<dl class="method">
+<dt id="pages.message_panel.MessagePanel.last_huma_response">
+<code class="descname">last_huma_response</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/message_panel.html#MessagePanel.last_huma_response"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.message_panel.MessagePanel.last_huma_response" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pages.message_panel.MessagePanel.type">
+<code class="descname">type</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/message_panel.html#MessagePanel.type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.message_panel.MessagePanel.type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pages.message_panel.MessagePanel.wait_for_number_of_replies_to_be">
+<code class="descname">wait_for_number_of_replies_to_be</code><span class="sig-paren">(</span><em>expected_number</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/message_panel.html#MessagePanel.wait_for_number_of_replies_to_be"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.message_panel.MessagePanel.wait_for_number_of_replies_to_be" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -80,7 +105,8 @@
   <ul>
 <li><a class="reference internal" href="#">pages package</a><ul>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
-<li><a class="reference internal" href="#module-pages.chatbox">pages.chatbox module</a></li>
+<li><a class="reference internal" href="#module-pages.base_page">pages.base_page module</a></li>
+<li><a class="reference internal" href="#module-pages.message_panel">pages.message_panel module</a></li>
 <li><a class="reference internal" href="#module-pages">Module contents</a></li>
 </ul>
 </li>
