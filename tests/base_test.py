@@ -1,6 +1,6 @@
 import pytest
 
-from pages.chatbox import Chatbox
+from pages.message_panel import MessagePanel
 from utils.framework import Framework
 
 class BaseTestClass():
@@ -18,7 +18,7 @@ class BaseTestClass():
         self.driver.get(self.framework.base_url)
 
         # Associate Page objects
-        self.chatbox = Chatbox(self.driver)
+        self.message_panel = MessagePanel(self.driver)
 
         yield self.toggle_browser()
         print("\nClosing browser\n")
