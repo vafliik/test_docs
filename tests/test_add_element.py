@@ -14,3 +14,9 @@ class TestAddElement(BaseTestClass):
         self.message_panel.wait_for_number_of_replies_to_be(1)
 
         assert self.message_panel.last_huma_response() == 'OK, I added a FlatButton'
+
+        self.view_panel.expand_card()
+
+        self.view_panel.card_content_elements()
+
+        pass
