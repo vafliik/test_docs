@@ -21,6 +21,14 @@ class Framework:
         self.base_url = self.get_opt('base_url')
 
     def start_browser(self, browser_type=None):
+        """
+        Start browser. Currently supported are Chrome and Firefox
+        Require latest selenium webdrivers to be installed and added in system path.
+        If no browser type specified, the value from .properties is used
+
+        :param browser_type: 'Chrome' for Chrome browser, any other value for Firefox (default)
+        :return: Selenium Webdriver
+        """
 
         if not browser_type:
             browser_type = self.get_opt('browser_type')
@@ -33,10 +41,14 @@ class Framework:
         return self.driver
 
     def stop_browser(self):
+        """
+        Quits the browser used for testing
+        """
         self.driver.quit()
 
     def load_configs(self):
-        """ Load variables from .properties configuration files. If local_execution is true in local_config file, function
+        """
+        Load variables from .properties configuration files. If local_execution is true in local_config file, function
         return both local config dict and server confgi dict. Otherwise function returns only server config dict.
 
         :return: list with config dictionaries
@@ -56,5 +68,10 @@ class Framework:
         return configs
 
     def get_opt(self, key):
+        """
+        Read the value from configuration (.properties) file
+        :param key: configuration key
+        :return: configuration value
+        """
 
         return self.configs[key]
