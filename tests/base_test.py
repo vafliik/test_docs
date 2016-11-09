@@ -4,7 +4,7 @@ from pages.message_panel import MessagePanel
 from pages.view_panel import ViewPanel
 from utils.framework import Framework
 
-class BaseTestClass():
+class BaseTest():
 
     def setup_class(self):
         print("\nInit Framework\n")
