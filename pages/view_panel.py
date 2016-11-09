@@ -5,6 +5,9 @@ from pages.base_page import BasePage
 
 
 class ViewPanel(BasePage):
+    """
+    Page Objects that represents the (right side) View Panel
+    """
 
     # Locators
     _card = By.CSS_SELECTOR, 'div.card-example'
@@ -24,7 +27,10 @@ class ViewPanel(BasePage):
         return self.get_child_elements(self.card_content())
 
     def card_content_buttons(self):
-        return self.card_content().find_elements(*self._button)
+        buttons = self.card_content().find_elements(*self._button)
+        for button in buttons:
+            self.highlight(button)
+        return buttons
 
     def card_content_structure(self):
         structure = []

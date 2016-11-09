@@ -19,6 +19,13 @@ class BasePage:
         self.timeout = int(self.framework.get_opt('timeout'))
 
     def wait_for_element(self, *locator, timeout=None):
+        """
+        Wait until the element is located
+
+        :param locator: element locator (tuple)
+        :param timeout: seconds to wait before failing (int)
+        :return:
+        """
         timeout = timeout or self.timeout
         element = WebDriverWait(self.driver, timeout).until(
             expected_conditions.visibility_of_element_located(locator)
@@ -26,7 +33,16 @@ class BasePage:
         self.highlight(element)
         return element
 
-    def wait_for_number_of_elements(self, locator, expected_number, timeout=None):
+    def wait_for_number_of_elements(self, *locator, expected_number, timeout=None):
+        """
+        Wait until required number of specified elements is located in the page
+
+        :param locator: element locator (tuple)
+        :param expected_number: number of elements (int)
+        :param timeout: seconds to wait before failing (int)
+        :return: true if all elements found
+        :raises: TimeoutException if elements not found within the time limit
+        """
         timeout = timeout or self.timeout
         return WebDriverWait(self.driver, timeout).until(
             custom_expected_conditions.number_of_elements_to_be(locator, expected_number)

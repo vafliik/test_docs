@@ -8,7 +8,7 @@
     
     <title>tests.base_test &#8212; Huma QA 0.1 documentation</title>
     
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -26,16 +26,22 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="top" title="Huma QA 0.1 documentation" href="../../index.html" />
-    <link rel="up" title="Module code" href="../index.html" />
-   
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="up" title="Module code" href="../index.html" /> 
   </head>
   <body role="document">
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Huma QA 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -46,17 +52,18 @@
 <span></span><span class="kn">import</span> <span class="nn">pytest</span>
 
 <span class="kn">from</span> <span class="nn">pages.message_panel</span> <span class="k">import</span> <span class="n">MessagePanel</span>
+<span class="kn">from</span> <span class="nn">pages.view_panel</span> <span class="k">import</span> <span class="n">ViewPanel</span>
 <span class="kn">from</span> <span class="nn">utils.framework</span> <span class="k">import</span> <span class="n">Framework</span>
 
-<div class="viewcode-block" id="BaseTestClass"><a class="viewcode-back" href="../../tests.html#tests.base_test.BaseTestClass">[docs]</a><span class="k">class</span> <span class="nc">BaseTestClass</span><span class="p">():</span>
+<div class="viewcode-block" id="BaseTest"><a class="viewcode-back" href="../../tests.html#tests.base_test.BaseTest">[docs]</a><span class="k">class</span> <span class="nc">BaseTest</span><span class="p">():</span>
 
-<div class="viewcode-block" id="BaseTestClass.setup_class"><a class="viewcode-back" href="../../tests.html#tests.base_test.BaseTestClass.setup_class">[docs]</a>    <span class="k">def</span> <span class="nf">setup_class</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="BaseTest.setup_class"><a class="viewcode-back" href="../../tests.html#tests.base_test.BaseTest.setup_class">[docs]</a>    <span class="k">def</span> <span class="nf">setup_class</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Init Framework</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">framework</span> <span class="o">=</span> <span class="n">Framework</span><span class="p">()</span></div>
 
 
     <span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">autouse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<div class="viewcode-block" id="BaseTestClass.toggle_browser"><a class="viewcode-back" href="../../tests.html#tests.base_test.BaseTestClass.toggle_browser">[docs]</a>    <span class="k">def</span> <span class="nf">toggle_browser</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="BaseTest.toggle_browser"><a class="viewcode-back" href="../../tests.html#tests.base_test.BaseTest.toggle_browser">[docs]</a>    <span class="k">def</span> <span class="nf">toggle_browser</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Starting browser</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">driver</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">framework</span><span class="o">.</span><span class="n">start_browser</span><span class="p">()</span>
@@ -64,6 +71,7 @@
 
         <span class="c1"># Associate Page objects</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">message_panel</span> <span class="o">=</span> <span class="n">MessagePanel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">view_panel</span> <span class="o">=</span> <span class="n">ViewPanel</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">driver</span><span class="p">)</span>
 
         <span class="k">yield</span> <span class="bp">self</span><span class="o">.</span><span class="n">toggle_browser</span><span class="p">()</span>
         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Closing browser</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -75,15 +83,7 @@
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="../../index.html">Documentation overview</a><ul>
-  <li><a href="../index.html">Module code</a><ul>
-  </ul></li>
-  </ul></li>
-</ul>
-</div>
+        <div class="sphinxsidebarwrapper">
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
@@ -98,17 +98,22 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2016, Pavel Pribyl.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
-      
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Huma QA 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Pavel Pribyl.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
   </body>
 </html>

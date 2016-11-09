@@ -20,6 +20,14 @@ pages.message_panel module
     :undoc-members:
     :show-inheritance:
 
+pages.view_panel module
+-----------------------
+
+.. automodule:: pages.view_panel
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------

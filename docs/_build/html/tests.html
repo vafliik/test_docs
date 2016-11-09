@@ -8,7 +8,7 @@
     
     <title>tests package &#8212; Huma QA 0.1 documentation</title>
     
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -25,16 +25,21 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="Huma QA 0.1 documentation" href="index.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="top" title="Huma QA 0.1 documentation" href="index.html" /> 
   </head>
   <body role="document">
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Huma QA 0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -49,17 +54,17 @@
 <div class="section" id="module-tests.base_test">
 <span id="tests-base-test-module"></span><h2>tests.base_test module<a class="headerlink" href="#module-tests.base_test" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="tests.base_test.BaseTestClass">
-<em class="property">class </em><code class="descclassname">tests.base_test.</code><code class="descname">BaseTestClass</code><a class="reference internal" href="_modules/tests/base_test.html#BaseTestClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.base_test.BaseTestClass" title="Permalink to this definition">¶</a></dt>
+<dt id="tests.base_test.BaseTest">
+<em class="property">class </em><code class="descclassname">tests.base_test.</code><code class="descname">BaseTest</code><a class="reference internal" href="_modules/tests/base_test.html#BaseTest"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.base_test.BaseTest" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <dl class="method">
-<dt id="tests.base_test.BaseTestClass.setup_class">
-<code class="descname">setup_class</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/base_test.html#BaseTestClass.setup_class"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.base_test.BaseTestClass.setup_class" title="Permalink to this definition">¶</a></dt>
+<dt id="tests.base_test.BaseTest.setup_class">
+<code class="descname">setup_class</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/base_test.html#BaseTest.setup_class"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.base_test.BaseTest.setup_class" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
-<dt id="tests.base_test.BaseTestClass.toggle_browser">
-<code class="descname">toggle_browser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/base_test.html#BaseTestClass.toggle_browser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.base_test.BaseTestClass.toggle_browser" title="Permalink to this definition">¶</a></dt>
+<dt id="tests.base_test.BaseTest.toggle_browser">
+<code class="descname">toggle_browser</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/base_test.html#BaseTest.toggle_browser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.base_test.BaseTest.toggle_browser" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -70,11 +75,34 @@
 <dl class="class">
 <dt id="tests.test_add_element.TestAddElement">
 <em class="property">class </em><code class="descclassname">tests.test_add_element.</code><code class="descname">TestAddElement</code><a class="reference internal" href="_modules/tests/test_add_element.html#TestAddElement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.test_add_element.TestAddElement" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#tests.base_test.BaseTestClass" title="tests.base_test.BaseTestClass"><code class="xref py py-class docutils literal"><span class="pre">tests.base_test.BaseTestClass</span></code></a></p>
+<dd><p>Bases: <a class="reference internal" href="#tests.base_test.BaseTest" title="tests.base_test.BaseTest"><code class="xref py py-class docutils literal"><span class="pre">tests.base_test.BaseTest</span></code></a></p>
 <dl class="method">
 <dt id="tests.test_add_element.TestAddElement.test_add_button">
 <code class="descname">test_add_button</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_add_element.html#TestAddElement.test_add_button"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.test_add_element.TestAddElement.test_add_button" title="Permalink to this definition">¶</a></dt>
 <dd><p>Verify that Button element can be added by typing into the chatbox input</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.test_add_element.TestAddElement.test_add_button_with_label">
+<code class="descname">test_add_button_with_label</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_add_element.html#TestAddElement.test_add_button_with_label"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.test_add_element.TestAddElement.test_add_button_with_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify that Button element with custom label
+can be added by typing into the chatbox input</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tests.test_structure">
+<span id="tests-test-structure-module"></span><h2>tests.test_structure module<a class="headerlink" href="#module-tests.test_structure" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="tests.test_structure.TestStructure">
+<em class="property">class </em><code class="descclassname">tests.test_structure.</code><code class="descname">TestStructure</code><a class="reference internal" href="_modules/tests/test_structure.html#TestStructure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.test_structure.TestStructure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#tests.base_test.BaseTest" title="tests.base_test.BaseTest"><code class="xref py py-class docutils literal"><span class="pre">tests.base_test.BaseTest</span></code></a></p>
+<dl class="method">
+<dt id="tests.test_structure.TestStructure.test_structure_matches_added_elements">
+<code class="descname">test_structure_matches_added_elements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/test_structure.html#TestStructure.test_structure_matches_added_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.test_structure.TestStructure.test_structure_matches_added_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Verify that after adding some elements,
+the created structure matches the intended one</p>
 </dd></dl>
 
 </dd></dl>
@@ -97,17 +125,12 @@
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-tests.base_test">tests.base_test module</a></li>
 <li><a class="reference internal" href="#module-tests.test_add_element">tests.test_add_element module</a></li>
+<li><a class="reference internal" href="#module-tests.test_structure">tests.test_structure module</a></li>
 <li><a class="reference internal" href="#module-tests">Module contents</a></li>
 </ul>
 </li>
 </ul>
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-  </ul></li>
-</ul>
-</div>
+
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -129,20 +152,21 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2016, Pavel Pribyl.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
-      
-      |
-      <a href="_sources/tests.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Huma QA 0.1 documentation</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Pavel Pribyl.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
   </body>
 </html>

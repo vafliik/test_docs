@@ -70,6 +70,7 @@ class Framework:
     def get_opt(self, key):
         """
         Read the value from configuration (.properties) file
+
         :param key: configuration key
         :return: configuration value
         """

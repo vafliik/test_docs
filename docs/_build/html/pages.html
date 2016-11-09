@@ -8,7 +8,7 @@
     
     <title>pages package &#8212; Huma QA 0.1 documentation</title>
     
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
@@ -25,16 +25,21 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="Huma QA 0.1 documentation" href="index.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="top" title="Huma QA 0.1 documentation" href="index.html" /> 
   </head>
   <body role="document">
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Huma QA 0.1 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
@@ -54,14 +59,61 @@
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Class with shared methods / locators for extending Page Objects</p>
 <dl class="method">
-<dt id="pages.base_page.BasePage.wait_for_element">
-<code class="descname">wait_for_element</code><span class="sig-paren">(</span><em>*locator</em>, <em>*</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/base_page.html#BasePage.wait_for_element"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.base_page.BasePage.wait_for_element" title="Permalink to this definition">¶</a></dt>
+<dt id="pages.base_page.BasePage.get_child_elements">
+<code class="descname">get_child_elements</code><span class="sig-paren">(</span><em>parent_element</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/base_page.html#BasePage.get_child_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.base_page.BasePage.get_child_elements" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="pages.base_page.BasePage.highlight">
+<code class="descname">highlight</code><span class="sig-paren">(</span><em>element</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/base_page.html#BasePage.highlight"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.base_page.BasePage.highlight" title="Permalink to this definition">¶</a></dt>
+<dd><p>Highlights (blinks) a Selenium Webdriver element</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pages.base_page.BasePage.wait_for_element">
+<code class="descname">wait_for_element</code><span class="sig-paren">(</span><em>*locator</em>, <em>*</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/base_page.html#BasePage.wait_for_element"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.base_page.BasePage.wait_for_element" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait until the element is located</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>locator</strong> &#8211; element locator (tuple)</li>
+<li><strong>timeout</strong> &#8211; seconds to wait before failing (int)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="pages.base_page.BasePage.wait_for_number_of_elements">
-<code class="descname">wait_for_number_of_elements</code><span class="sig-paren">(</span><em>locator</em>, <em>expected_number</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/base_page.html#BasePage.wait_for_number_of_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.base_page.BasePage.wait_for_number_of_elements" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="descname">wait_for_number_of_elements</code><span class="sig-paren">(</span><em>*locator</em>, <em>*</em>, <em>expected_number</em>, <em>timeout=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/base_page.html#BasePage.wait_for_number_of_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.base_page.BasePage.wait_for_number_of_elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait until required number of specified elements is located in the page</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>locator</strong> &#8211; element locator (tuple)</li>
+<li><strong>expected_number</strong> &#8211; number of elements (int)</li>
+<li><strong>timeout</strong> &#8211; seconds to wait before failing (int)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">true if all elements found</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first last">TimeoutException if elements not found within the time limit</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
 
 </dd></dl>
 
@@ -72,6 +124,7 @@
 <dt id="pages.message_panel.MessagePanel">
 <em class="property">class </em><code class="descclassname">pages.message_panel.</code><code class="descname">MessagePanel</code><span class="sig-paren">(</span><em>driver</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/message_panel.html#MessagePanel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.message_panel.MessagePanel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#pages.base_page.BasePage" title="pages.base_page.BasePage"><code class="xref py py-class docutils literal"><span class="pre">pages.base_page.BasePage</span></code></a></p>
+<p>Page Objects that represents the (left side) Message Panel</p>
 <dl class="method">
 <dt id="pages.message_panel.MessagePanel.last_huma_response">
 <code class="descname">last_huma_response</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/message_panel.html#MessagePanel.last_huma_response"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.message_panel.MessagePanel.last_huma_response" title="Permalink to this definition">¶</a></dt>
@@ -80,11 +133,49 @@
 <dl class="method">
 <dt id="pages.message_panel.MessagePanel.type">
 <code class="descname">type</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/message_panel.html#MessagePanel.type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.message_panel.MessagePanel.type" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Type value into the message box input field
+and confirms it by Enter key
+:param value: value to be entered (str)</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pages.message_panel.MessagePanel.wait_for_number_of_replies_to_be">
 <code class="descname">wait_for_number_of_replies_to_be</code><span class="sig-paren">(</span><em>expected_number</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/message_panel.html#MessagePanel.wait_for_number_of_replies_to_be"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.message_panel.MessagePanel.wait_for_number_of_replies_to_be" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pages.view_panel">
+<span id="pages-view-panel-module"></span><h2>pages.view_panel module<a class="headerlink" href="#module-pages.view_panel" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="pages.view_panel.ViewPanel">
+<em class="property">class </em><code class="descclassname">pages.view_panel.</code><code class="descname">ViewPanel</code><span class="sig-paren">(</span><em>driver</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/view_panel.html#ViewPanel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.view_panel.ViewPanel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pages.base_page.BasePage" title="pages.base_page.BasePage"><code class="xref py py-class docutils literal"><span class="pre">pages.base_page.BasePage</span></code></a></p>
+<p>Page Objects that represents the (right side) View Panel</p>
+<dl class="method">
+<dt id="pages.view_panel.ViewPanel.card_content">
+<code class="descname">card_content</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/view_panel.html#ViewPanel.card_content"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.view_panel.ViewPanel.card_content" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pages.view_panel.ViewPanel.card_content_buttons">
+<code class="descname">card_content_buttons</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/view_panel.html#ViewPanel.card_content_buttons"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.view_panel.ViewPanel.card_content_buttons" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pages.view_panel.ViewPanel.card_content_elements">
+<code class="descname">card_content_elements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/view_panel.html#ViewPanel.card_content_elements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.view_panel.ViewPanel.card_content_elements" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pages.view_panel.ViewPanel.card_content_structure">
+<code class="descname">card_content_structure</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/view_panel.html#ViewPanel.card_content_structure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.view_panel.ViewPanel.card_content_structure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pages.view_panel.ViewPanel.expand_card">
+<code class="descname">expand_card</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pages/view_panel.html#ViewPanel.expand_card"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#pages.view_panel.ViewPanel.expand_card" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -107,17 +198,12 @@
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
 <li><a class="reference internal" href="#module-pages.base_page">pages.base_page module</a></li>
 <li><a class="reference internal" href="#module-pages.message_panel">pages.message_panel module</a></li>
+<li><a class="reference internal" href="#module-pages.view_panel">pages.view_panel module</a></li>
 <li><a class="reference internal" href="#module-pages">Module contents</a></li>
 </ul>
 </li>
 </ul>
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-  </ul></li>
-</ul>
-</div>
+
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -139,20 +225,21 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2016, Pavel Pribyl.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
-      
-      |
-      <a href="_sources/pages.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Huma QA 0.1 documentation</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Pavel Pribyl.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8.
+    </div>
   </body>
 </html>

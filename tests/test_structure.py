@@ -4,6 +4,10 @@ from tests.base_test import BaseTest
 class TestStructure(BaseTest):
 
     def test_structure_matches_added_elements(self):
+        """
+        Verify that after adding some elements,
+        the created structure matches the intended one
+        """
 
         self.message_panel.type('Add FlatButton')
         self.message_panel.wait_for_number_of_replies_to_be(1)

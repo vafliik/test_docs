@@ -20,6 +20,14 @@ tests.test_add_element module
     :undoc-members:
     :show-inheritance:
 
+tests.test_structure module
+---------------------------
+
+.. automodule:: tests.test_structure
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------
