@@ -56,5 +56,5 @@ Current IDEs support PyTest for running tests out of the box or via some plugin
 
 Following report is from Intellij IDEA
 
-.. image:: _static/idea_test_output.png
+.. image:: docs/_static/idea_test_output.png
 
