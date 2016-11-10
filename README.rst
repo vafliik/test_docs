@@ -25,13 +25,25 @@ Install selenium python bindings::
 
   > pip install -U selenium
 
+.. _test_project_structure:
+
+Test Project structure
+=============================
+
+Project files are organized in following structure::
+
+    /config - basic configuration (browser type, basic URL, timeouts)
+    /docs - tests and API documentation *(/docs/_build/html/index.html)*
+    /tests - test scripts
+    /pages - page objects (representation of application objects as used by tests)
+    /utils - test framework
 
 .. _running-the-tests:
 
 Running the tests
 =============================
 
-Go to **<project dir>/tests**
+Go to **<project dir>/QA**
 
 Run::
 
