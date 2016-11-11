@@ -31,7 +31,7 @@ Install selenium python bindings::
 Running the tests
 =============================
 
-Go to **<project dir>/tests**
+Go to **<project dir>/QA**
 
 Run::
 
