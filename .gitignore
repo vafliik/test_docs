@@ -1,8 +1,0 @@
-.cache/
-.idea/
-
-__pycache__/
-*.py[cod]
-*$py.class
-/tests/.cache/
-/docs/_build/
